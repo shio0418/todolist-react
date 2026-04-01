@@ -1,3 +1,78 @@
+.container {
+  max-width: 420px;
+  margin: 16px auto;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.list {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.card {
+  font-family: sans-serif;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: lightblue;
+}
+
 .over500 {
-  color: red;
+  color: #c62828;
+  border-color: #f3b3b3;
+  background: #fff3f3;
+}
+
+.form {
+  font-family: sans-serif;
+  display: grid;
+  gap: 10px;
+  text-align: center;
+}
+
+.formLabel {
+  display: grid;
+  gap: 4px;
+  text-align: left;
+}
+
+.labelText {
+  font-size: 12px;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px #dbeafe;
+}
+
+.button {
+  width: fit-content;
+  padding: 6px 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  cursor: pointer;
+  justify-self: center;
 }

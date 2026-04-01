@@ -24,31 +24,40 @@ export default function ItemList() {
   }
 
   return (
-    <div>
-      <div>ItemList</div>
-      <div>
+    <div className={styles.container}>
+      <div className={styles.title}>ItemList📝</div>
+      <div className={styles.list}>
         {items.map((item) => (
-          <div key={item.name} className={item.price >= 500 ? styles.over500 : undefined}>
+          <div
+            key={item.name}
+            className={`${styles.card} ${item.price >= 500 ? styles.over500 : ''}`.trim()}
+          >
             <div className="name">名前：{item.name}</div>
             <div className="price">{item.price}円</div>
             {item.price >= 10000 && <div>高額商品</div>}
           </div>
         ))}
       </div>
-      <div>
-        <label>
-          名前
-          <input onChange={(e) => setNewItemName(e.target.value)} type="text" value={newItemName} />
-        </label>
-        <label>
-          価格
+      <div className={styles.form}>
+        <label className={styles.formLabel}>
+          <span className={styles.labelText}>名前</span>
           <input
+            className={styles.input}
+            onChange={(e) => setNewItemName(e.target.value)}
+            type="text"
+            value={newItemName}
+          />
+        </label>
+        <label className={styles.formLabel}>
+          <span className={styles.labelText}>価格</span>
+          <input
+            className={styles.input}
             onChange={(e) => setNewItemPrice(Number(e.target.value))}
             type="number"
             value={newItemPrice}
           />
         </label>
-        <button onClick={addItem}>add</button>
+        <button className={styles.button} onClick={addItem}>add</button>
       </div>
     </div>
   )
